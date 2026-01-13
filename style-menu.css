@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  direction: rtl;
+  background: #3b1e1e;
+  color: #e6d8c3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%; /* חדש */
+  height: auto;    /* חדש */
+  display: block;  /* חדש */
+}
+
+nav {
+  background: #2c1515;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #b37c3f;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: #e6d8c3;
+  /* text-decoration: none; */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background 0.4s ease, color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #b37c3f;
+  /* /* transform: translateX(-100%);
+  transition: transform 0.4s ease; */
+  z-index: -1; 
+  border-radius: 10px;
+}
+
+nav a:hover::before,
+nav a.active::before {
+  transform: translateX(0);
+}
+
+nav a:hover,
+nav a.active {
+  color: #2c1515;
+}
+
+main.menu-container {
+  max-width: 90%;
+  margin: 0.5rem auto;
+  flex-grow: 1;
+  padding: 0.5rem 0.5rem 3rem;
+  .menu-container {
+    display: block; /* מבטיח שהקטגוריות יערמו אחת מתחת לשנייה */
+  }
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #b37c3f;
+  text-align: center;
+}
+
+.category {
+  margin-bottom: 3rem;
+  width: 100%;         /* ודא שהם תופסים את כל הרוחב */
+  display: block;      /* שיהיו אלמנטים בשורה חדשה */
+  margin-bottom: 3rem;
+}
+
+.category h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid #b37c3f;
+  padding-bottom: 0.5rem;
+  color: #d9cba0;
+}
+
+.items-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu-item {
+  background: #2c1515;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 450px;
+  flex-shrink: 0;
+  padding: 0.5rem;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 45px rgba(179, 124, 63, 0.9);
+}
+
+.menu-item img {
+  width: 180px;
+  height:auto;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+  margin: 0;
+}
+
+.item-info {
+  padding: 1rem 1.2rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 0.5rem;
+}
+
+.item-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #e6d8c3;
+}
+
+.item-info p {
+  font-size: 1rem;
+  color: #cbbf9c;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.order-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b37c3f;
+}
+
+.btn-order {
+  background: linear-gradient(45deg, #b37c3f, #7e5a1a);
+  color: #2c1515;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  touch-action: manipulation; /* חדש */
+}
+
+.btn-order:hover {
+  background: linear-gradient(45deg, #7e5a1a, #b37c3f);
+  box-shadow: 0 6px 14px rgba(179, 124, 63, 0.8);
+}
+
+.btn-order i {
+  font-size: 1.2rem;
+}
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #ee9a1b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fa9464;
+}
+/* --- רספונסיביות מתקדמת --- */
+@media (max-width: 900px) {
+  .items-grid {
+    gap: 20px;
+  }
+  .menu-item {
+    width: 350px;
+  }
+  .menu-item img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  main.menu-container {
+    padding: 0.5rem;
+  }
+  .items-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu-item {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .menu-item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+  }
+  .item-info {
+    padding: 1rem;
+    text-align: center;
+    margin-right: 0;
+  }
+  .order-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    flex-direction: column;      /* חדש */
+    align-items: center;         /* חדש */
+    gap: 0.8rem;                 /* חדש */
+  }
+
+  nav h1 {
+    font-size: 1.8rem;           /* חדש */
+  }
+
+  nav ul {
+    flex-direction: column;     /* חדש */
+    align-items: center;        /* חדש */
+    gap: 0.5rem;                /* חדש */
+  }
+}
+
+/* --- פוטר --- */
+footer {
+  background: #2c1515;
+  text-align: center;
+  padding: 1rem;
+  color: #cbbf9c;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+  margin-top: auto;
+}
+
+footer a {
+  color: #b37c3f;
+  text-decoration: underline;
+}

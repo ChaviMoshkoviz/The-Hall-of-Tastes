@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>היכל הטעמים - התחברות</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style-login.css" />
+  <link rel="stylesheet" href="indexscript.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <nav>
+        <h1>היכל הטעמים</h1>
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="menu.html" class="active">תפריט</a></li>
+            <li><a href="ogin.html">התחברות</a></li>
+            <li><a href="cart.html">סל קניות</a></li>
+        </ul>
+    </nav>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <a href="index.html"><span class="close-button">&times;</span></a>
+      <main class="login-container">
+        <h2>התחברות</h2>
+        <form>
+          <label for="username">שם משתמש</label>
+          <input type="text" id="username" placeholder="הכנס שם משתמש"  />
+          <label for="password">סיסמה</label>
+          <input type="password" id="password" placeholder="הכנס סיסמה" />
+           <div id="additionalFields"></div> 
+        <button type="submit" class="btn-login">התחבר</button>
+
+        </form>
+      </main>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 היכל הטעמים - כל הזכויות שמורות
+  </footer>
+ <script src="indexscript.js"></script>
+
+</body>
+
+</html>

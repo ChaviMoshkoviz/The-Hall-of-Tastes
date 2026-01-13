@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>היכל הטעמים - סל קניות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style-cart.css" />
+    </head>
+<body>
+    <nav>
+        <h1>היכל הטעמים</h1>
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="menu.html">תפריט</a></li>
+            <li><a href="ogin.html">התחברות</a></li>
+            <li><a href="cart.html" class="active">סל קניות</a></li>
+        </ul>
+    </nav>
+
+    <main class="cart-container">
+        <h2>סל הקניות שלך</h2>
+        <p>רשימת פריטים שהוספת להזמנה</p>
+
+        <div id="cart-items-container" class="cart-items">
+            </div>
+
+        <div class="total">
+            <span>סה"כ:</span>
+            <span id="cart-total-price">₪0</span>
+        </div>
+
+        <button class="btn-checkout">להמשיך לתשלום</button>
+        <button class="btn-checkout">לתשלום מהיר</button>
+    </main>
+
+    <footer>
+        &copy; 2025 היכל הטעמים - כל הזכויות שמורות
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
